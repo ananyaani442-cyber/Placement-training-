@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main() {
+    int num1, num2 = 0, base = 1, digit;
+
+    printf("Enter a binary number: ");
+    scanf("%d", &num1);  
+
+    while (num1 > 0) {
+        digit = num1 % 10;           
+        num2 = num2 + digit * base;  
+        num1 = num1 / 10;            
+        base = base * 2;             
+    }
+
+    printf("Decimal number = %d", num2);
+
+    return 0;
+}
